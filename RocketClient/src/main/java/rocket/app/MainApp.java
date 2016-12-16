@@ -52,7 +52,7 @@ public class MainApp extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		// START is executed by the Application framework after INIT
+
 		AnchorPane root = new AnchorPane();
 		Scene scene = new Scene(root, 1300, 500);
 
@@ -76,7 +76,7 @@ public class MainApp extends Application {
 	
 	public void StartHubAndClient()
 	{
-		//	Start the Hub and Client
+	
 		
 		try {
 			rHub = new RocketHub(PORT);
@@ -94,7 +94,7 @@ public class MainApp extends Application {
 	}
 	public void showRocketMenu() {
 		try {
-			// Load person overview.
+			
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("view/Mortgage.fxml"));
 			AnchorPane RocketMain = (AnchorPane) loader.load();
@@ -103,7 +103,7 @@ public class MainApp extends Application {
 
 			primaryStage.setScene(scene);
 
-			// Give the controller access to the main app.
+			
 			rController = loader.getController();
 			rController.setMainApp(this);
 
